@@ -1,0 +1,92 @@
+@import url("https://fonts.googleapis.com/css2?family=Kanit&display=swap");
+
+/*--- GENERAL START ---*/
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: "Kanit", sans-serif;
+}
+
+body{
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 1fr 4fr;
+    grid-template-areas: 
+    "header header"
+    "aside main"
+    "footer footer";
+}
+
+nav {
+    grid-area: nav;
+}
+
+header{
+    grid-area: header;
+}
+
+footer {
+    grid-area: footer;
+    background-color: aquamarine;
+}
+
+
+main {
+    grid-area: main;
+    background-color: bisque;
+}
+
+aside {
+    grid-area: aside;
+    background-color: blue;
+}
+
+/*--- GENERAL END---*/
+
+
+/*--- HEADER START ---*/
+
+/*--- HEADER END ---*/
+
+
+/*--- NAV START---*/
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    height: 50px;
+    width: 100%;
+    background-color: burlywood;
+    color: white;
+  }
+
+nav ul {
+    list-style: none;
+    margin: 0;
+  }
+
+nav ul li a{
+    text-decoration: none;
+    text-transform: uppercase;
+    color: white;
+    padding: 10px;
+  }
+
+
+.logo{
+    font-size: 40px;
+}
+
+
+.nav-links {
+    display: flex;
+    justify-content: center;
+  }
+
+.burger-menu {
+    justify-content: flex-end;
+}
+
+/*--- NAV END---*/
