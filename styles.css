@@ -18,38 +18,12 @@ body{
     "footer footer footer";
 }
 
-nav {
-  grid-area: nav;
-}
-
-header {
-  background-image: url(assets/hero.webp);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  grid-area: header;
-  height: 50vh;
-}
-
-footer {
-  grid-area: footer;
-  background-color: rgb(151, 126, 94);
-  bottom: 0;
-  text-align: center;
-  color: white;
-  padding: 10px;
-}
-
 main {
   grid-area: main;
-  background-color: burlywood;
   padding: 20px;
+  background-color: rgb(239, 237, 237);
 }
 
-aside {
-  grid-area: aside;
-  background-color: burlywood;
-}
 
 .login-title-wrapper {
   background-color: rgb(151, 126, 94);
@@ -59,24 +33,24 @@ aside {
   text-align: center;
 }
 
-.aside2{
-  grid-area: aside2;
-  background-color: burlywood;
-  padding: 10px;
-}
-
-.aside2 p{
-  color: black;
-}
 
 /*--- GENERAL END---*/
 
 /*--- HEADER START ---*/
+header {
+  background-image: url(assets/hero.webp);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  grid-area: header;
+  height: 50vh;
+}
 
 /*--- HEADER END ---*/
 
 /*--- NAV START---*/
 nav {
+  grid-area: nav;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -99,6 +73,7 @@ nav ul li a {
   color: white;
   transition: 0.25s ease-in-out;
   position: relative;
+  text-align: center;
 }
 
 nav ul li a::after {
@@ -127,7 +102,6 @@ nav ul li a:hover::after {
 }
 
 .burger-menu {
-  justify-content: flex-end;
   font-size: 40px;
   padding-right: 20px;
 }
@@ -135,26 +109,26 @@ nav ul li a:hover::after {
 /*--- NAV END---*/
 
 /*--- ASIDE START---*/
-
-.login {
-  display: flex;
+aside {
+  grid-area: aside;
   background-color: burlywood;
-  height: 300px;
-  justify-content: center;
-  align-items: center;
-}
-
-.login form input,
-.login form button {
-  display: block;
-  margin: 30px auto;
-  padding: 5px;
-  color: black;
-  width: 100%;
-  border-radius: 12px;
 }
 
 /*--- ASIDE END---*/
+
+/*--- ASIDE2 START---*/
+
+.aside2{
+  grid-area: aside2;
+  background-color: rgb(1, 118, 46);
+  padding: 10px;
+}
+
+.aside2 p{
+  color: black;
+}
+
+/*--- ASIDE2 END---*/
 
 /*--- MAIN START---*/
 main p,
@@ -179,11 +153,14 @@ main p{
 }
 
 .card{
-  background-color: white;
-  box-shadow: 0 4px 8px black;
   width: calc(33.33% - 40px);
   text-align: center;
   transition: transform .25s ease-in-out;
+}
+
+.card.btn{
+  background-color: burlywood;
+  text-transform: uppercase;
 }
 
 .card:hover{
@@ -203,6 +180,19 @@ main p{
 
 /*--- MAIN END ---*/
 
+/*--- FOOTER START---*/
+
+footer {
+  grid-area: footer;
+  background-color: rgb(151, 126, 94);
+  bottom: 0;
+  text-align: center;
+  color: white;
+  padding: 10px;
+}
+
+/*--- FOOTER END---*/
+
 
 
 /*--- MEDIA QUERIES---*/
@@ -210,13 +200,13 @@ main p{
 @media screen and (max-width:1275px) {
 
   body{
-    grid-template-columns: 1fr 3fr;
+    grid-template-columns: 1fr 2fr;
     grid-template-areas:
       "header header"
       "aside main"
       "aside2 main"
       "footer footer";
   }
-  
+
 }
   
