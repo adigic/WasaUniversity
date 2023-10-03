@@ -1,0 +1,222 @@
+@import url("https://fonts.googleapis.com/css2?family=Kanit&display=swap");
+
+/*--- GENERAL START ---*/
+
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Kanit", sans-serif;
+  color: white;
+}
+
+body{
+  display: grid;
+  grid-template-columns: 1fr 3fr 1fr;
+  grid-template-areas:
+    "header header header"
+    "aside main aside2"
+    "footer footer footer";
+}
+
+nav {
+  grid-area: nav;
+}
+
+header {
+  background-image: url(assets/hero.webp);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  grid-area: header;
+  height: 50vh;
+}
+
+footer {
+  grid-area: footer;
+  background-color: rgb(151, 126, 94);
+  bottom: 0;
+  text-align: center;
+  color: white;
+  padding: 10px;
+}
+
+main {
+  grid-area: main;
+  background-color: burlywood;
+  padding: 20px;
+}
+
+aside {
+  grid-area: aside;
+  background-color: burlywood;
+}
+
+.login-title-wrapper {
+  background-color: rgb(151, 126, 94);
+}
+
+.login-title {
+  text-align: center;
+}
+
+.aside2{
+  grid-area: aside2;
+  background-color: burlywood;
+  padding: 10px;
+}
+
+.aside2 p{
+  color: black;
+}
+
+/*--- GENERAL END---*/
+
+/*--- HEADER START ---*/
+
+/*--- HEADER END ---*/
+
+/*--- NAV START---*/
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 50px;
+  width: 100%;
+  background-color: rgb(151, 126, 94);
+  color: white;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  gap: 20px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 1.1em;
+  color: white;
+  transition: 0.25s ease-in-out;
+  position: relative;
+}
+
+nav ul li a::after {
+  content: "";
+  width: 100%;
+  height: 0;
+  background: burlywood;
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  transition: ease-in 0.1s;
+}
+
+nav ul li a:hover::after {
+  height: 3px;
+}
+
+.logo {
+  font-size: 40px;
+  padding-left: 10px;
+}
+
+.nav-links {
+  display: flex;
+  justify-content: center;
+}
+
+.burger-menu {
+  justify-content: flex-end;
+  font-size: 40px;
+  padding-right: 20px;
+}
+
+/*--- NAV END---*/
+
+/*--- ASIDE START---*/
+
+.login {
+  display: flex;
+  background-color: burlywood;
+  height: 300px;
+  justify-content: center;
+  align-items: center;
+}
+
+.login form input,
+.login form button {
+  display: block;
+  margin: 30px auto;
+  padding: 5px;
+  color: black;
+  width: 100%;
+  border-radius: 12px;
+}
+
+/*--- ASIDE END---*/
+
+/*--- MAIN START---*/
+main p,
+main h4 {
+  color: black;
+}
+
+main p{
+  padding-top: 20px;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin-top: 20px;
+}
+
+.wrapper i {
+  color: black;
+  font-size: 40px;
+}
+
+.card{
+  background-color: white;
+  box-shadow: 0 4px 8px black;
+  width: calc(33.33% - 40px);
+  text-align: center;
+  transition: transform .25s ease-in-out;
+}
+
+.card:hover{
+  transform: scale(1.03);
+}
+
+.wrapper h4{
+  padding: 20px;
+  text-transform: uppercase;
+}
+
+.wrapper img{
+  object-fit: cover;
+  width: 100%;
+  height: 200px;
+}
+
+/*--- MAIN END ---*/
+
+
+
+/*--- MEDIA QUERIES---*/
+
+@media screen and (max-width:1275px) {
+
+  body{
+    grid-template-columns: 1fr 3fr;
+    grid-template-areas:
+      "header header"
+      "aside main"
+      "aside2 main"
+      "footer footer";
+  }
+  
+}
+  
