@@ -10,7 +10,6 @@
 
 body{
     display: grid;
-    height: 100vh;
     grid-template-columns: 1fr 4fr;
     grid-template-areas: 
     "header header"
@@ -24,6 +23,7 @@ nav {
 
 header{
     grid-area: header;
+    height: 50vh;
 }
 
 footer {
@@ -47,15 +47,20 @@ aside {
 
 /*--- HEADER START ---*/
 
+header img{
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
 /*--- HEADER END ---*/
 
 
 /*--- NAV START---*/
 nav {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    position: absolute;
     height: 50px;
     width: 100%;
     background-color: burlywood;
@@ -65,18 +70,36 @@ nav {
 nav ul {
     list-style: none;
     margin: 0;
+    gap: 20px;
   }
 
 nav ul li a{
     text-decoration: none;
     text-transform: uppercase;
     color: white;
-    padding: 10px;
+    transition: .25s ease-in-out;
+    position: relative;
   }
+
+  nav ul li a::after{
+    content: '';
+    width: 100%;
+    height: 0;
+    background: #000000bb;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: ease-in 0.1s;
+}
+
+nav ul li a:hover::after{
+    height: 3px;
+}
 
 
 .logo{
     font-size: 40px;
+    padding-left: 10px;
 }
 
 
@@ -87,6 +110,17 @@ nav ul li a{
 
 .burger-menu {
     justify-content: flex-end;
+    font-size: 40px;
+    padding-right: 20px;
+}
+
+.login {
+    background-color: bisque;
+}
+
+.login form input, .login form button {
+    display: block;
+    margin: 2px auto;
 }
 
 /*--- NAV END---*/
