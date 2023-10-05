@@ -33,15 +33,9 @@ section{
   margin-bottom: 40px;
 }
 
-
-.login-title-wrapper {
-  background-color: rgb(151, 126, 94);
-}
-
-.login-title {
+h2 {
   text-align: center;
 }
-
 
 /*--- GENERAL END---*/
 
@@ -151,8 +145,12 @@ nav i {
 aside {
   grid-area: aside;
   background-color: burlywood;
-  
 }
+
+form {
+  background-color: antiquewhite;
+}
+
 .asidenews h1  {
   justify-content: center;
 }
