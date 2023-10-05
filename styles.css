@@ -37,6 +37,11 @@ h2 {
   text-align: center;
 }
 
+h3 {
+  text-align: center;
+  padding-bottom: 40px;
+}
+
 /*--- GENERAL END---*/
 
 /*--- HEADER START ---*/
@@ -144,11 +149,29 @@ nav i {
 /*--- ASIDE START---*/
 aside {
   grid-area: aside;
-  background-color: burlywood;
+  /* background-color: burlywood; */
 }
 
 form {
-  background-color: antiquewhite;
+  
+}
+
+.login-container {
+  padding: 40px;
+  padding-bottom: 50px;
+  margin-bottom: 50px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+}
+
+aside h2 {
+  background-color: rgb(80, 60, 53);
+  padding: 20px;
+  color: white;
+}
+
+button {
+  width: 100%;
+
 }
 
 .asidenews h1  {
@@ -183,6 +206,8 @@ main p{
 .card{
   text-align: center;
   transition: transform .25s ease-in-out;
+  margin-bottom: 40px;
+  margin-top: 20px;
 }
 
 .card.btn{
