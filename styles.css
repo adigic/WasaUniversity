@@ -6,7 +6,7 @@
   padding: 0;
   margin: 0;
   font-family: "Kanit", sans-serif;
-  color: white;
+  color: black;
 }
 
 html{
@@ -16,11 +16,11 @@ html{
 
 body{
   display: grid;
-  grid-template-columns: 1fr 3fr 1fr;
+  grid-template-columns: 1fr 3fr;
   grid-template-areas:
-    "header header header"
-    "aside main aside2"
-    "footer footer footer";
+    "header header "
+    "aside main "
+    "footer footer";
 }
 
 main {
@@ -121,23 +121,13 @@ nav ul li a:hover::after {
 aside {
   grid-area: aside;
   background-color: burlywood;
+  
+}
+.asidenews h1  {
+  justify-content: center;
 }
 
 /*--- ASIDE END---*/
-
-/*--- ASIDE2 START---*/
-
-.aside2{
-  grid-area: aside2;
-  background-color: rgb(1, 118, 46);
-  padding: 10px;
-}
-
-.aside2 p{
-  color: black;
-}
-
-/*--- ASIDE2 END---*/
 
 /*--- MAIN START---*/
 main p,
@@ -235,14 +225,14 @@ footer {
 
 @media screen and (max-width:1275px) {
 
-  body{
+  /* body{
     grid-template-columns: 1fr 2fr;
     grid-template-areas:
       "header header"
       "aside main"
       "aside2 main"
       "footer footer";
-  }
+  } */
 
 }
   
