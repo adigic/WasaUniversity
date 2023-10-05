@@ -55,6 +55,32 @@ header {
   height: 50vh;
 }
 
+.search-bar {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  margin: 17% 225px;
+  background-color: rgba(0, 0, 0, 0.703);
+  width: 500px;
+  padding: 25px;
+}
+
+.search-bar h1 {
+  font-size: 3.5em;
+  text-transform: uppercase;
+}
+
+.search-bar p {
+  color: white;
+}
+
+
+.search-bar input {
+  width: 200px;
+  border-radius: 11px;
+}
+
 /*--- HEADER END ---*/
 
 /*--- NAV START---*/
@@ -98,6 +124,10 @@ nav ul li a::after {
 
 nav ul li a:hover::after {
   height: 3px;
+}
+
+nav i {
+  color: white;
 }
 
 .logo {
@@ -212,9 +242,12 @@ footer {
   background-color: rgb(151, 126, 94);
   bottom: 0;
   text-align: center;
-  color: white;
   padding: 10px;
   width: 100%;
+}
+
+footer p {
+  color: white;
 }
 
 /*--- FOOTER END---*/
