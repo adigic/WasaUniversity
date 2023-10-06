@@ -46,12 +46,13 @@ h3 {
 
 /*--- HEADER START ---*/
 header {
-  background-image: url(assets/hero.webp);
+  background-image: url(assets/123.webp);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   grid-area: header;
   height: 50vh;
+
 }
 
 .search-bar {
@@ -62,9 +63,8 @@ header {
   background-color: rgba(0, 0, 0, 0.703);
   width: 500px;
   padding: 25px;
-  position: relative;
-  top: 300px;
-  left: 100px;
+  margin-top:10vh;
+  margin-left:5vh;
 }
 
 .search-bar h1 {
@@ -210,6 +210,7 @@ button {
 .asidenews h1  {
   justify-content: center;
 }
+
 /*--- ASIDE END---*/
 
 /*--- MAIN START---*/
@@ -311,16 +312,21 @@ footer p {
 
 /*--- MEDIA QUERIES---*/
 
-@media screen and (max-width:1275px) {
+@media screen and (max-width:1024px) {
 
-  /* body{
-    grid-template-columns: 1fr 2fr;
-    grid-template-areas:
-      "header header"
-      "aside main"
-      "aside2 main"
-      "footer footer";
-  } */
+ 
 
 }
-  
+@media screen and (max-width: 768px){
+  body{
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "header"
+      "aside"
+      "main"
+      "footer";
+  }
+  .asidenews{
+    margin:100px;
+  }
+}
