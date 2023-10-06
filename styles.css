@@ -59,10 +59,12 @@ header {
   display: flex;
   flex-direction: column;
   text-align: left;
-  margin: 17% 225px;
   background-color: rgba(0, 0, 0, 0.703);
   width: 500px;
   padding: 25px;
+  position: relative;
+  top: 300px;
+  left: 100px;
 }
 
 .search-bar h1 {
@@ -74,10 +76,37 @@ header {
   color: white;
 }
 
+.input{
+  padding-top: 20px;
+}
 
 .search-bar input {
-  width: 200px;
+  width: 250px;
   border-radius: 11px;
+  padding: 8px;
+  float: left;
+}
+
+.search-bar i{
+  color: white;
+  font-size: 3rem;
+  animation: arrow 1.5s infinite;
+}
+
+@keyframes arrow {
+
+  0%{
+    transform: translateX(0);
+  }
+
+  50%{
+    transform: translateX(10px);
+  }
+
+  100%{
+    transform: translateX(0);
+  }
+  
 }
 
 /*--- HEADER END ---*/
@@ -152,9 +181,6 @@ aside {
   /* background-color: burlywood; */
 }
 
-form {
-  
-}
 
 .login-container {
   padding: 40px;
@@ -174,10 +200,16 @@ button {
 
 }
 
+.asidenews .card-body{
+  height: 150px;
+  width: 100%;
+  text-align: start;
+}
+
+
 .asidenews h1  {
   justify-content: center;
 }
-
 /*--- ASIDE END---*/
 
 /*--- MAIN START---*/
@@ -210,12 +242,12 @@ main p{
   margin-top: 20px;
 }
 
-.card.btn{
+main .card.btn{
   background-color: burlywood;
   text-transform: uppercase;
 }
 
-.card:hover{
+main .card:hover{
   transform: scale(1.03);
 }
 
