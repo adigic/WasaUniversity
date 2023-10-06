@@ -294,6 +294,8 @@ main .card:hover{
 /*--- FOOTER START---*/
 
 footer {
+  display: flex;
+  justify-content: space-between;
   grid-area: footer;
   background-color: rgb(151, 126, 94);
   bottom: 0;
@@ -305,6 +307,36 @@ footer {
 footer p {
   color: white;
 }
+
+.contact-info {
+  text-align: left;
+  margin: 15px 180px;
+  padding: 0;
+}
+
+.social-media {
+  margin: 15px 180px;
+  text-align: right;
+}
+
+.social-media i {
+  color: white;
+  font-size: 3rem;
+}
+
+.social-media i {
+  animation: spin 3s infinite;
+}
+
+ @keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+ }
 
 /*--- FOOTER END---*/
 
