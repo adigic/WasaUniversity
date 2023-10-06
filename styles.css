@@ -85,6 +85,7 @@ header {
   border-radius: 11px;
   padding: 8px;
   float: left;
+  padding-left: 15px;
 }
 
 .search-bar i{
@@ -119,7 +120,7 @@ nav {
   align-items: center;
   height: 50px;
   width: 100%;
-  background-color: rgb(151, 126, 94);
+  background-color: rgb(68, 43, 26);
   color: white;
 }
 
@@ -160,7 +161,7 @@ nav i {
 
 .logo {
   font-size: 40px;
-  padding-left: 10px;
+  padding-left: 20px;
 }
 
 .nav-links {
@@ -178,7 +179,6 @@ nav i {
 /*--- ASIDE START---*/
 aside {
   grid-area: aside;
-  /* background-color: burlywood; */
 }
 
 
@@ -189,31 +189,37 @@ aside {
   box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
 }
 
+aside .btn-danger,
+.btn-danger:focus,
+.btn-danger:active {
+  background-color: rgb(189, 131, 84) !important;
+  border-color:  rgb(155, 109, 71) !important;
+  width: 100%;
+  padding: 8px;
+}
+
+aside .btn-danger:hover {
+  background-color: rgb(122, 84, 53) !important;
+  border-color:  rgb(104, 73, 48) !important;
+  width: 100%;
+}
+
 aside h2 {
-  background-color: rgb(80, 60, 53);
+  background-color:  rgb(68, 43, 26);
   padding: 20px;
   color: white;
 }
 
-button {
-  width: 100%;
-
-}
-
-.asidenews .card-body{
+.asidenews .card-body {
   height: 150px;
   width: 100%;
   text-align: start;
 }
 
-
-.asidenews h1  {
-  justify-content: center;
-}
-
 /*--- ASIDE END---*/
 
 /*--- MAIN START---*/
+
 main p,
 main h4 {
   color: black;
@@ -243,9 +249,18 @@ main p{
   margin-top: 20px;
 }
 
-main .card.btn{
-  background-color: burlywood;
-  text-transform: uppercase;
+main .btn-primary,
+.btn-primary:focus,
+.btn-primary:active {
+  background-color: rgb(124, 99, 79) !important;
+  border-color:  rgb(124, 99, 79) !important;
+  width: 40%;
+}
+
+main .btn-primary:hover {
+  background-color: rgb(99, 79, 63) !important;
+  border-color:  rgb(99, 78, 61) !important;
+  width: 40%;
 }
 
 main .card:hover{
@@ -297,11 +312,11 @@ footer {
   display: flex;
   justify-content: space-between;
   grid-area: footer;
-  background-color: rgb(151, 126, 94);
+  background-color:  rgb(68, 43, 26);
   bottom: 0;
   text-align: center;
   padding: 10px;
-  width: 100%;
+  margin-top: 40px;
 }
 
 footer p {
@@ -349,6 +364,7 @@ footer p {
  
 
 }
+
 @media screen and (max-width: 768px){
   body{
     grid-template-columns: 1fr;
