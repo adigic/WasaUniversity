@@ -18,8 +18,8 @@ body{
   display: grid;
   grid-template-columns: 1fr 3fr;
   grid-template-areas:
-    "header header "
-    "aside main "
+    "header header"
+    "aside main"
     "footer footer";
 }
 
@@ -52,20 +52,21 @@ header {
   background-position: center;
   background-size: cover;
   grid-area: header;
-  height: 50vh;
+  height: 550px;
 
 }
 
 .search-bar {
+  position: absolute;
   color: white;
   display: flex;
   flex-direction: column;
   text-align: left;
   background-color: rgba(0, 0, 0, 0.703);
-  width: 500px;
   padding: 25px;
-  margin-top:10vh;
-  margin-left:5vh;
+  margin-top:150px;
+  margin-left:50px;
+  box-shadow: 0 4px 8px black;
 }
 
 .search-bar h1 {
@@ -83,10 +84,21 @@ header {
 
 .search-bar input {
   width: 250px;
-  border-radius: 11px;
+  border-radius: 8px;
+  border: 2px solid rgb(189, 131, 84);
+  background-color: rgb(248, 241, 234);
+  color: rgb(68, 43, 26);
+  box-shadow: rgba(255, 255, 255, 0.2) 0px 0px 0px 1px inset, rgba(0, 0, 0, 0.9) 0px 0px 0px 1px;
   padding: 8px;
   float: left;
   padding-left: 15px;
+  /* transition: all 5s ease-in-out; */
+}
+
+.search-bar input:focus {
+  outline: none;
+  box-shadow: black 0px 3px 5px 0px inset, rgba(68, 43, 26, 0.65) -0px -1px 3px 1px inset;
+  border: 2px solid burlywood;
 }
 
 .search-bar i{
@@ -114,13 +126,11 @@ header {
 /*--- HEADER END ---*/
 
 /*--- NAV START---*/
-nav {
-  grid-area: nav;
+ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
   height: 50px;
-  width: 100%;
   background-color: rgb(68, 43, 26);
   color: white;
 }
@@ -138,7 +148,7 @@ nav ul li a {
   color: white;
   transition: 0.25s ease-in-out;
   position: relative;
-  text-align: center;
+
 }
 
 nav ul li a::after {
@@ -168,9 +178,12 @@ nav i {
 .nav-links {
   display: flex;
   justify-content: center;
+  padding-right: 50px;
+  border-left: 2px solid white;
 }
 
 .burger-menu {
+  display: none;
   font-size: 40px;
   padding-right: 20px;
 }
@@ -180,7 +193,7 @@ nav i {
 /*--- ASIDE START---*/
 aside {
   grid-area: aside;
-  /* min-width: 350px; */
+  min-width: 350px;
 }
 
 
@@ -224,11 +237,9 @@ aside h2 {
 }
 
 
-/* .sub-title{
-  border-bottom: 3px solid black;
-  width: max-content;
+.sub-title{
   margin-bottom: 30px;
-} */
+}
 
 /*--- ASIDE END---*/
 
@@ -254,6 +265,7 @@ main p{
 .wrapper i {
   color: black;
   font-size: 40px;
+  min-width: fit-content;
 }
 
 .card{
@@ -262,6 +274,10 @@ main p{
   margin-bottom: 40px;
   margin-top: 20px;
   transition: .5s;
+}
+
+.wrapper .card{
+  width: 18rem;
 }
 
 main .btn-primary,
@@ -290,7 +306,6 @@ main .card:hover{
 
 .wrapper img{
   object-fit: cover;
-  width: 100%;
   height: 200px;
 }
 
@@ -325,34 +340,49 @@ main .card:hover{
 /*--- FOOTER START---*/
 
 footer {
-  display: flex;
-  justify-content: space-between;
   grid-area: footer;
   background-color:  rgb(68, 43, 26);
+  display: flex;
+  justify-content: space-evenly;
+  align-items: start;
+  flex-direction: column;
   bottom: 0;
-  text-align: center;
-  padding: 10px;
+  height: 300px;
 }
 
-footer p {
-  color: white;
+
+.footer-wrapper{
+  padding-left: 50px;
 }
+
 
 .contact-info {
-  text-align: left;
-  margin: 15px 180px;
-  padding: 0;
+  display: flex;
+  flex-direction: column;
+  text-align: start;
+  padding-bottom: 5px;
+}
+
+.contact-info i, .contact-info {
+  color: white;
+  font-size: 1.5rem;
+}
+
+.contact-info a{
+  align-items: center;
+}
+
+.contact-info i{
+  padding-right: 10px;
 }
 
 .social-media {
   display: flex;
-  margin: 15px 180px;
-  text-align: right;
 }
 
 .social-media i {
   color: white;
-  font-size: 3rem;
+  font-size: 2rem;
 }
 
 .twitter i:hover {
@@ -361,13 +391,16 @@ footer p {
 }
 
 .facebook i:hover {
-  animation: spin 1s;
+  animation: reverse-spin 1s;
   color: #3b5998;
 }
 
 .instagram i:hover {
   animation: spin 1s;
-  color:linear-gradient(45deg, #405de6, #5851db, #833ab4, #c13584, #e1306c, #fd1d1d);
+  background:linear-gradient(45deg, #405de6, #5851db, #833ab4, #c13584, #e1306c, #fd1d1d);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
 }
 
 
@@ -381,6 +414,16 @@ footer p {
   }
  }
 
+ @keyframes reverse-spin {
+  0% {
+    transform: rotate(360deg);
+  }
+
+  100% {
+    transform: rotate(0deg);
+  }
+ }
+
 /*--- FOOTER END---*/
 
 
@@ -390,9 +433,33 @@ footer p {
 @media screen and (max-width:1024px) {
 
 
+  body{
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "header"
+      "aside"
+      "main"      
+      "footer";
+  }
+
+  nav{
+    display: flex;
+    justify-content: space-between;
+  }
+
+
+  .nav-links{
+    display: none;
+  }
+
+  .hamburger{
+    float: right;
+  }
+
 }
 
 @media screen and (max-width: 768px){
+  
   body{
     grid-template-columns: 1fr;
     grid-template-areas:
@@ -402,16 +469,8 @@ footer p {
       "footer";
   }
 
-
-
-  aside{ 
-    margin: auto;
-    margin-top: 50px;
-  }
-
   .asidenews{
     padding-top: 50px;
-    width: 100%;
   }
 
   .asidenews h3{
@@ -422,5 +481,18 @@ footer p {
     padding-top: 50px;
     
 
-}
+  }
+
+  .search-bar{
+    margin: 0 auto;
+    width: 100%;
+    text-align: center;
+    align-items: center;
+  }
+
+
+  .search-bar h1 {
+    font-size: 2.5rem;
+  }
+
 }
