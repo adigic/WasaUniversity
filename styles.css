@@ -27,6 +27,7 @@ main {
   grid-area: main;
   padding: 20px;
   background-color: rgb(239, 237, 237);
+  /* min-width: 990px; */
 }
 
 section{
@@ -179,6 +180,7 @@ nav i {
 /*--- ASIDE START---*/
 aside {
   grid-area: aside;
+  /* min-width: 350px; */
 }
 
 
@@ -210,11 +212,23 @@ aside h2 {
   color: white;
 }
 
+/* aside h3{
+  padding: 0;
+} */
+
 .asidenews .card-body {
   height: 150px;
   width: 100%;
   text-align: start;
+  margin: auto;
 }
+
+
+/* .sub-title{
+  border-bottom: 3px solid black;
+  width: max-content;
+  margin-bottom: 30px;
+} */
 
 /*--- ASIDE END---*/
 
@@ -247,6 +261,7 @@ main p{
   transition: transform .25s ease-in-out;
   margin-bottom: 40px;
   margin-top: 20px;
+  transition: .5s;
 }
 
 main .btn-primary,
@@ -265,6 +280,7 @@ main .btn-primary:hover {
 
 main .card:hover{
   transform: scale(1.03);
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
 }
 
 .wrapper h4{
@@ -316,7 +332,6 @@ footer {
   bottom: 0;
   text-align: center;
   padding: 10px;
-  margin-top: 40px;
 }
 
 footer p {
@@ -330,6 +345,7 @@ footer p {
 }
 
 .social-media {
+  display: flex;
   margin: 15px 180px;
   text-align: right;
 }
@@ -339,9 +355,21 @@ footer p {
   font-size: 3rem;
 }
 
-.social-media i {
-  animation: spin 3s infinite;
+.twitter i:hover {
+  animation: spin 1s;
+  color: #26a7de;
 }
+
+.facebook i:hover {
+  animation: spin 1s;
+  color: #3b5998;
+}
+
+.instagram i:hover {
+  animation: spin 1s;
+  color:linear-gradient(45deg, #405de6, #5851db, #833ab4, #c13584, #e1306c, #fd1d1d);
+}
+
 
  @keyframes spin {
   0% {
@@ -361,7 +389,6 @@ footer p {
 
 @media screen and (max-width:1024px) {
 
- 
 
 }
 
@@ -374,7 +401,26 @@ footer p {
       "main"
       "footer";
   }
-  .asidenews{
-    margin:100px;
+
+
+
+  aside{ 
+    margin: auto;
+    margin-top: 50px;
   }
+
+  .asidenews{
+    padding-top: 50px;
+    width: 100%;
+  }
+
+  .asidenews h3{
+    padding-bottom: 0;
+  }
+
+  .asidenews .card{
+    padding-top: 50px;
+    
+
+}
 }
