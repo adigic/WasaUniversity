@@ -15,6 +15,7 @@ html {
 }
 
 body {
+  
   display: grid;
   grid-template-columns: 1fr 3fr;
   grid-template-areas:
@@ -24,9 +25,9 @@ body {
 }
 
 main {
+  background-color: #f6efe8;
   grid-area: main;
   padding: 20px;
-  background-color: rgb(239, 237, 237);
 }
 
 section {
@@ -188,27 +189,38 @@ nav i {
 aside {
   grid-area: aside;
   min-width: 400px;
+  background-color: rgb(235, 228, 220);
+}
+
+form{
+  background-color: white;
+}
+
+form h2{
+  margin-bottom: 0;
 }
 
 .login-container {
   padding: 40px;
   padding-bottom: 50px;
-  box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px,
-    rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
 }
 
 aside .btn-danger,
 .btn-danger:focus,
 .btn-danger:active {
-  background-color: rgb(189, 131, 84) !important;
-  border-color: rgb(155, 109, 71) !important;
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  background-color: rgb(109, 138, 103) !important;
+  border-color: #364632 !important;
   width: 100%;
   padding: 8px;
 }
 
 aside .btn-danger:hover {
-  background-color: rgb(122, 84, 53) !important;
-  border-color: rgb(104, 73, 48) !important;
+  background-color: rgb(87, 110, 81) !important;
+  border-color: rgb(48, 65, 45) !important;
   width: 100%;
 }
 
@@ -218,24 +230,81 @@ aside h2 {
   color: white;
 }
 
+aside h3{
+  color: rgb(68, 43, 26);
+  text-transform: uppercase;
+  font-weight: 600; 
+  font-size: 2rem;
+  text-align: start;
+  border-bottom: 2px solid black;
+  padding: 0px;
+  margin: 0;
+  width: max-content;
+}
+
+.asidenews .sub-title{
+  display: flex;
+  justify-content: center;
+  padding: 50px;
+}
+
+aside i{
+  font-size: 2rem;
+  border: 2px solid;
+  margin-right: 10px;
+  padding: 5px;
+}
+
 .asidenews .card-body {
   height: 150px;
   width: 100%;
   text-align: start;
   margin: auto;
+  color: burlywood;
+}
+
+.asidenews .card-body p{
+  color: white;
 }
 
 .asidenews .card-body:hover {
-  background-color: burlywood;
+  background-color: rgba(221, 180, 127, 0.519);
+  color: rgba(110, 55, 32, 0.733);
 }
 
 .col {
-  background-color: burlywood;
+  background-color: rgb(222, 187, 141);
 }
 
 /*--- ASIDE END---*/
 
 /*--- MAIN START---*/
+.main-title{
+  display: flex;
+  margin-left: 15px;
+
+
+}
+
+main h3{
+  color: rgb(68, 43, 26);
+  text-transform: uppercase;
+  font-weight: 600; 
+  font-size: 2rem;
+  text-align: start;
+  border-bottom: 2px solid black;
+  padding: 0px;
+  margin: 0;
+  width: max-content;
+
+}
+
+main i{
+  font-size: 2rem;
+  border: 2px solid;
+  margin-right: 10px;
+  padding: 5px;
+}
 
 main p,
 main h4 {
@@ -260,12 +329,24 @@ main p {
   min-width: fit-content;
 }
 
+
 .card {
   text-align: center;
   transition: transform 0.25s ease-in-out;
   margin-bottom: 40px;
   margin-top: 20px;
   transition: 0.5s;
+}
+
+main .card {
+  background-color: white;
+  color: rgb(68, 43, 26);
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  
+}
+
+main .card p {
+  color: rgb(68, 43, 26);
 }
 
 .wrapper .card {
@@ -275,13 +356,14 @@ main p {
 main .btn-primary,
 .btn-primary:focus,
 .btn-primary:active {
-  background-color: rgb(124, 99, 79) !important;
+  background-color: rgb(68, 43, 26) !important;
   border-color: rgb(124, 99, 79) !important;
   width: 40%;
+  color: rgb(241, 204, 155);
 }
 
 main .btn-primary:hover {
-  background-color: rgb(99, 79, 63) !important;
+  background-color: rgb(99, 74, 54) !important;
   border-color: rgb(99, 78, 61) !important;
   width: 40%;
 }
@@ -462,6 +544,31 @@ footer {
     display: flex;
     justify-content: space-between;
   }
+
+  .login-container {
+    padding-left: 20%;
+    padding-right: 20%;
+  }
+  
+  aside .btn-danger,
+  .btn-danger:focus,
+  .btn-danger:active {
+    width: 70%;
+  }
+
+  aside .btn-danger:hover {
+    width: 70%;
+  }
+
+  main .card {
+    margin: 0;
+  }
+
+  .wrapper{
+    gap: 1;
+    margin:0;
+    margin-top: 20px;
+  }
 }
 
 @media screen and (max-width: 768px) {
@@ -487,17 +594,52 @@ footer {
     padding-top: 50px;
   }
 
+
+
   .search-bar {
     margin: 0 auto;
     width: 100%;
     text-align: center;
     align-items: center;
-    /*--- Nytt---*/
     background: linear-gradient(180deg, rgba(0, 0, 0, 0.703) 80%, rgba(0, 0, 0, 0)100%); 
   }
 
   .search-bar h1 {
     font-size: 2.5rem;
+  }
+
+
+  .login-container {
+    padding-left: 10%;
+    padding-right: 10%;
+    margin-bottom: 20px;
+  }
+  
+  aside .btn-danger,
+  .btn-danger:focus,
+  .btn-danger:active {
+    width: 80%;
+  }
+
+  aside .btn-danger:hover {
+    width: 80%;
+  }
+
+  main .main-title{
+    justify-content: center;
+    padding: 50px;
+    margin: 0;
+
+  }
+
+  .wrapper{
+    gap: 1;
+    margin:0;
+    margin-top: 20px;
+  }
+
+  main .card {
+    margin: 0;
   }
 
   .carousel img {
