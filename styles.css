@@ -416,16 +416,26 @@ footer {
   grid-area: footer;
   background-color: rgb(68, 43, 26);
   display: flex;
-  justify-content: space-evenly;
-  align-items: start;
-  flex-direction: column;
+  justify-content: space-between;
   bottom: 0;
   height: 250px;
 }
 
 .footer-left {
   padding-left: 50px;
+  float: left;
 }
+
+.footer-right{
+  padding-right: 50px;
+  float: right;
+}
+
+.footer-right li{
+  list-style: none;
+  display: flex;
+}
+
 
 .contact-info {
   display: flex;
