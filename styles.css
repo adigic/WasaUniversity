@@ -416,19 +416,26 @@ footer {
   grid-area: footer;
   background-color: rgb(68, 43, 26);
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-around;
   bottom: 0;
   height: 250px;
-  padding-top:75px;
+  align-items: center;
+}
+
+footer a{
+  font-size: 1.3rem;
 }
 
 .footer-left {
-  padding-left: 50px;
   float: left;
 }
 
+.footer-middle img{
+  width: 150px;
+  margin: auto;
+}
+
 .footer-right{
-  padding-right: 50px;
   float: right;
 }
 
@@ -473,18 +480,23 @@ footer {
   font-size: 2rem;
 }
 
+.twitter i{
+  color: #26a7de;
+}
+
 .twitter i:hover {
   animation: spin 1s;
-  color: #26a7de;
+}
+
+.facebook i{
+  color: #3b5998;
 }
 
 .facebook i:hover {
   animation: reverse-spin 1s;
-  color: #3b5998;
 }
 
-.instagram i:hover {
-  animation: spin 1s;
+.instagram i{
   background: linear-gradient(
     45deg,
     #405de6,
@@ -497,6 +509,10 @@ footer {
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
+}
+
+.instagram i:hover {
+  animation: spin 1s;
 }
 
 /*--- FOOTER END---*/
@@ -589,6 +605,10 @@ footer {
     margin:0;
     margin-top: 20px;
   }
+
+  footer a{
+    font-size: 1.2rem;
+  }
 }
 
 @media screen and (max-width: 768px) {
@@ -664,5 +684,9 @@ footer {
 
   .carousel img {
     height: 350px;
+  }
+
+  .footer-middle{
+    display: none;
   }
 }
