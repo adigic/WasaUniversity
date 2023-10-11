@@ -356,15 +356,15 @@ main .card p {
 main .btn-primary,
 .btn-primary:focus,
 .btn-primary:active {
-  background-color: rgb(68, 43, 26) !important;
-  border-color: rgb(124, 99, 79) !important;
+  background-color: rgb(117, 84, 62) !important;
+  border-color: rgb(97, 76, 59) !important;
   width: 40%;
-  color: rgb(241, 204, 155);
+  color: rgb(255, 255, 255);
 }
 
 main .btn-primary:hover {
-  background-color: rgb(99, 74, 54) !important;
-  border-color: rgb(99, 78, 61) !important;
+  background-color: rgb(92, 69, 51) !important;
+  border-color: rgb(95, 74, 56) !important;
   width: 40%;
 }
 
@@ -372,6 +372,10 @@ main .card:hover {
   transform: scale(1.03);
   box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
     rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+}
+
+.card h5 {
+  font-weight: bold;
 }
 
 .wrapper h4 {
