@@ -109,6 +109,7 @@ nav i {
 
 nav i:hover {
   color: burlywood;
+  cursor: pointer;
 }
 
 .logo {
@@ -129,6 +130,7 @@ nav i:hover {
   position: relative;
   font-size: 40px;
   padding-right: 20px;
+  cursor: pointer;
 }
 
 /*--- NAV END---*/
