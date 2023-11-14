@@ -137,56 +137,35 @@ nav i:hover {
 
 /*--- SEARCHBAR END ---*/
 .search-bar {
-  position: absolute;
   color: white;
   display: flex;
+  justify-content: center;
   flex-direction: column;
-  text-align: left;
-  background-color: rgba(0, 0, 0, 0.703);
-  padding: 25px;
-  margin-top: 150px;
-  margin-left: 50px;
-  box-shadow: 0 4px 8px black;
-}
-
-.search-bar h1 {
-  font-size: 3.5em;
-  text-transform: uppercase;
-}
-
-.search-bar p {
-  color: white;
-}
-
-.input {
-  padding-top: 20px;
-}
-
-.search-bar input {
   width: 250px;
-  border-radius: 8px;
-  border: 2px solid rgb(189, 131, 84);
-  background-color: rgb(248, 241, 234);
+  margin: auto;
+  margin-top: 130px;
+  text-align: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.703);
+  padding: 50px;
+  box-shadow: 0 4px 8px black;
+  gap: 10px;
+}
+
+.search-bar button{
+  text-decoration: none;
+  border: none;
   color: rgb(68, 43, 26);
-  box-shadow: rgba(255, 255, 255, 0.2) 0px 0px 0px 1px inset,
-    rgba(0, 0, 0, 0.9) 0px 0px 0px 1px;
-  padding: 8px;
-  float: left;
-  padding-left: 15px;
-  /* transition: all 5s ease-in-out; */
+  width: 100px;
+  padding: 5px 0px;
+  border-radius: 5px;
+  transition: 0.25s ease-in-out;
 }
 
-.search-bar input:focus {
-  outline: none;
-  box-shadow: black 0px 3px 5px 0px inset,
-    rgba(68, 43, 26, 0.65) -0px -1px 3px 1px inset;
-  border: 2px solid burlywood;
-}
-
-.search-bar i {
-  color: white;
-  font-size: 3rem;
-  animation: arrow 1.5s infinite;
+.search-bar button:hover {
+  background-color: burlywood;
+  width: 120px;
+  font-weight: bold;
 }
 
 /*--- SEARCHBAR END ---*/
