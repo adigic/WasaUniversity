@@ -189,6 +189,25 @@ nav i:hover {
   animation: arrow 1.5s infinite;
 }
 
+.search-bar li{
+  list-style: none;
+  padding: 0;
+  text-align: start;
+  padding-left: 5px;
+
+}
+
+.search-bar li a{
+  text-decoration: none;
+  color: white;
+  transition: 0.15s ease-in-out;
+}
+
+.search-bar li a:hover {
+  color: burlywood;
+  cursor: pointer;
+}
+
 /*--- SEARCHBAR END ---*/
 
 /*--- HEADER END ---*/
