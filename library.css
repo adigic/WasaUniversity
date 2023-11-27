@@ -136,7 +136,7 @@ nav i:hover {
 /*--- NAV END---*/
 
 /*--- SEARCHBAR END ---*/
-.search-bar{
+.search-bar {
   color: white;
   display: flex;
   justify-content: center;
@@ -151,8 +151,7 @@ nav i:hover {
   box-shadow: 0 4px 8px black;
 }
 
-
-.search-bar button{
+.search-bar button {
   text-decoration: none;
   border: none;
   color: rgb(68, 43, 26);
@@ -169,17 +168,24 @@ nav i:hover {
   font-weight: bold;
 }
 
-.search-bar .startbuttons{
+.search-bar .startbuttons {
   gap: 10px;
 }
 
-.searchbox label{
+.search-box label {
   color: white;
   padding-bottom: 10px;
 }
 
+.search-box {
+  display: none;
+}
 
-.add-book label{
+.add-book {
+  display: none;
+}
+
+.add-book label {
   color: white;
   margin: 5px;
 }
@@ -188,11 +194,9 @@ nav i:hover {
   margin-top: 15px;
 } */
 
-
 /*--- SEARCHBAR END ---*/
 
 /*--- HEADER END ---*/
-
 
 /*--- MAIN START---*/
 .main-title {
@@ -287,7 +291,6 @@ main .card:hover {
 .card h5 {
   font-weight: bold;
 }
-
 
 /*--- MAIN END ---*/
 

@@ -16,6 +16,8 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 
     <title>VasaUniversitet</title>
+
+    <script src="library.js" defer></script>
   </head>
   <body>
     <header>
@@ -46,19 +48,19 @@
 
        <div class="search-bar">
 
-        <div class="startbuttons" style="display: none;">
-        <button>Sök</button>
-        <button>Lägg till</button> <!-- Inputfält för att skapa bok  -->
+        <div class="start-buttons">
+        <button id="search">Sök</button>
+        <button id="add"">Lägg till</button> <!-- Inputfält för att skapa bok  -->
         <!-- <button>Ta bort</button> --> <!-- Ha en knapp för varje bok. -->
       </div>
 
-      <div class="searchbox" style="display: none;">
+      <div class="search-box">
         <label for="title">Sök på en titel</label>
         <input type="text" id="title">   
         <button type="submit" id="search-button">Lägg till</button> 
       </div>
 
-      <div class="add-book" style="display: box;">
+      <div class="add-book">
         <form>
         
         <label for="title">Titel</label>
@@ -81,7 +83,9 @@
     </header>
 
     <main>
+      <div class="booklist" id="booklist">
 
+      </div>
       
     </main>
 
