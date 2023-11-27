@@ -55,7 +55,7 @@ function displayBooks() {
     })
     .then((data) => {
       console.log(data);
-      const bookListElement = document.getElementById("BookList");
+      const bookListElement = document.getElementById("bookList");
       const bookList = document.createElement("ul");
 
       data.forEach((Books) => {
