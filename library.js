@@ -47,3 +47,33 @@ function showAddMenu() {
   addBook.style.display = "block";
   searchMenu.style.display = "none";
 }
+
+function displayBooks() {
+  fetch("http://localhost:3000/books")
+    .then((res) => {
+      return res.json();
+    })
+    .then((data) => {
+      console.log(data);
+      const bookListElement = document.getElementById("BookList");
+      const bookList = document.createElement("ul");
+
+      data.forEach((Books) => {
+        // Show Book Titel and Author
+        const listItem = document.createElement("li");
+        listItem.textContent = `${Books.Title} by ${Books.Author}`;
+
+        // Show cover img
+        const coverImage = document.createElement("img");
+        coverImage.src = Books.Cover;
+
+        listItem.appendChild(coverImage);
+        bookList.appendChild(listItem);
+
+        console.log(Books);
+      });
+      bookListElement.appendChild(bookList);
+    })
+    .catch((err) => console.log("error" + err));
+}
+displayBooks();
