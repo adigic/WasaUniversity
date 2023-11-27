@@ -136,7 +136,7 @@ nav i:hover {
 /*--- NAV END---*/
 
 /*--- SEARCHBAR END ---*/
-.search-bar {
+.search-bar{
   color: white;
   display: flex;
   justify-content: center;
@@ -149,8 +149,8 @@ nav i:hover {
   background-color: rgba(0, 0, 0, 0.703);
   padding: 50px;
   box-shadow: 0 4px 8px black;
-  gap: 10px;
 }
+
 
 .search-bar button{
   text-decoration: none;
@@ -159,6 +159,7 @@ nav i:hover {
   width: 100px;
   padding: 5px 0px;
   border-radius: 5px;
+  margin-top: 15px;
   transition: 0.25s ease-in-out;
 }
 
@@ -168,102 +169,30 @@ nav i:hover {
   font-weight: bold;
 }
 
+.search-bar .startbuttons{
+  gap: 10px;
+}
+
+.searchbox label{
+  color: white;
+  padding-bottom: 10px;
+}
+
+
+.add-book label{
+  color: white;
+  margin: 5px;
+}
+
+/* form button{
+  margin-top: 15px;
+} */
+
+
 /*--- SEARCHBAR END ---*/
 
 /*--- HEADER END ---*/
 
-/*--- ASIDE START---*/
-aside {
-  grid-area: aside;
-  min-width: 400px;
-  background-color: rgb(235, 228, 220);
-}
-
-form {
-  background-color: white;
-}
-
-form h2 {
-  margin-bottom: 0;
-}
-
-.login-container {
-  padding: 40px;
-  padding-bottom: 50px;
-  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
-}
-
-aside .btn-danger,
-.btn-danger:focus,
-.btn-danger:active {
-  display: flex;
-  justify-content: center;
-  margin: auto;
-  background-color: rgb(109, 138, 103) !important;
-  border-color: #364632 !important;
-  width: 100%;
-  padding: 8px;
-}
-
-aside .btn-danger:hover {
-  background-color: rgb(87, 110, 81) !important;
-  border-color: rgb(48, 65, 45) !important;
-  width: 100%;
-}
-
-aside h2 {
-  background-color: rgb(68, 43, 26);
-  padding: 20px;
-  color: white;
-}
-
-aside h3 {
-  color: rgb(68, 43, 26);
-  text-transform: uppercase;
-  font-weight: 600;
-  font-size: 2rem;
-  text-align: start;
-  border-bottom: 2px solid black;
-  padding: 0px;
-  margin: 0;
-  width: max-content;
-}
-
-.asidenews .sub-title {
-  display: flex;
-  justify-content: center;
-  padding: 50px;
-}
-
-aside i {
-  font-size: 2rem;
-  border: 2px solid;
-  margin-right: 10px;
-  padding: 5px;
-}
-
-.asidenews .card-body {
-  height: 150px;
-  width: 100%;
-  text-align: start;
-  margin: auto;
-  color: burlywood;
-}
-
-.asidenews .card-body p {
-  color: white;
-}
-
-.asidenews .card-body:hover {
-  background-color: rgba(221, 180, 127, 0.519);
-  color: rgba(110, 55, 32, 0.733);
-}
-
-.col {
-  background-color: rgb(222, 187, 141);
-}
-
-/*--- ASIDE END---*/
 
 /*--- MAIN START---*/
 .main-title {
@@ -340,14 +269,13 @@ main .btn-primary,
 .btn-primary:active {
   background-color: rgb(117, 84, 62) !important;
   border-color: rgb(97, 76, 59) !important;
-  width: 40%;
+  width: 50%;
   color: rgb(255, 255, 255);
 }
 
 main .btn-primary:hover {
   background-color: rgb(92, 69, 51) !important;
   border-color: rgb(95, 74, 56) !important;
-  width: 40%;
 }
 
 main .card:hover {
@@ -360,39 +288,6 @@ main .card:hover {
   font-weight: bold;
 }
 
-.wrapper h4 {
-  padding: 20px;
-  text-transform: uppercase;
-}
-
-.wrapper img {
-  object-fit: cover;
-  height: 200px;
-}
-
-.carousel-item img {
-  height: 600px;
-  object-fit: cover;
-}
-
-.carousel-caption {
-  display: flex;
-  justify-content: center;
-  background-color: rgba(0, 0, 0, 0.603);
-  color: white;
-  text-align: center;
-  margin: 0;
-  border-radius: 5px;
-}
-
-.carousel-caption h5 {
-  margin: 0;
-  font-size: 1.5rem;
-}
-
-.carousel-caption p {
-  color: white;
-}
 
 /*--- MAIN END ---*/
 
