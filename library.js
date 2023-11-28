@@ -66,12 +66,24 @@ function displayBooks() {
         const titleAndAuthor = document.createElement("span");
         titleAndAuthor.textContent = `${Books.Title} by ${Books.Author}`;
 
+        // Show Genre
+        const genreElement = document.createElement("span");
+        genreElement.textContent = `Genre: ${Books.Genre}`;
+
+        // Show Description
+        const descriptionElement = document.createElement("span");
+        descriptionElement = `Description: ${Books.Description}`;
+
         // Show cover img
         const coverImage = document.createElement("img");
         coverImage.src = Books.Cover;
 
+        //
+
         // Elements in a desired order
         listItem.appendChild(titleAndAuthor);
+        listItem.appendChild(genreElement);
+        listItem.appendChild(descriptionElement);
         listItem.appendChild(coverImage);
         bookList.appendChild(listItem);
         listItem.appendChild(checkboxLabel);
