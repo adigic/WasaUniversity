@@ -63,11 +63,11 @@ function displayBooks() {
         checkboxLabel.htmlFor = checkbox.id;
 
         // Show Book Title and Author
-        const titleAndAuthor = document.createElement("span");
+        const titleAndAuthor = document.createElement("h2");
         titleAndAuthor.textContent = `${Books.Title} by ${Books.Author}`;
 
         // Show Genre
-        const genreElement = document.createElement("span");
+        const genreElement = document.createElement("p");
         genreElement.textContent = `Genre: ${Books.Genre}`;
 
         // Show Description
@@ -81,10 +81,10 @@ function displayBooks() {
         //
 
         // Elements in a desired order
+        listItem.appendChild(coverImage);
         listItem.appendChild(titleAndAuthor);
         listItem.appendChild(genreElement);
         listItem.appendChild(descriptionElement);
-        listItem.appendChild(coverImage);
         bookList.appendChild(listItem);
         listItem.appendChild(checkboxLabel);
         listItem.appendChild(checkbox);
