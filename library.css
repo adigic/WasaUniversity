@@ -292,6 +292,8 @@ main .card:hover {
   font-weight: bold;
 }
 
+
+
 /*--- MAIN END ---*/
 
 /*--- FOOTER START---*/
@@ -582,26 +584,52 @@ footer a {
 .bookList span {
 }
 
-.bookList ul {
+.bookList h2{
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 5px 0px 5px 0px;
+}
+
+.bookList p {
+  margin-bottom: 10px;
   padding: 0;
-  margin: 0;
+}
+
+.bookList span{
+  background-color: rgb(157, 138, 115);
+  border-radius: 5px;
+  text-align: left;
+  font-size: 0.8rem;
+  margin: 5px;
+  padding: 5px;
+  height: 100px;
+}
+
+.bookList ul {
   display: flex;
   flex-wrap: wrap;
+  padding: 0;
+  margin: 0;
+  justify-content: center;
 }
 
 .bookList li {
   text-align: center;
-  width: 180px;
   display: flex;
-
+  width: 500px;
   flex-direction: column;
   align-items: center;
   list-style: none;
+  background-color: rgb(185, 164, 137);
+  margin: 5px;
+  padding: 10px;
+  border-radius: 5px;
 }
 
 .bookList img {
-  width: 100px;
-  height: 150px;
+  width: 300px;
+  height: 400px;
+  padding: 10px;
 }
 
 .search-suggestion {
