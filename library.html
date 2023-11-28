@@ -48,14 +48,14 @@
 
        <div class="search-bar">
 
-<!--         <div class="start-buttons">
+        <div class="start-buttons">
         <button id="search">Sök</button>
-        <button id="add">Lägg till</button> --> <!-- Inputfält för att skapa bok  -->
+        <button id="add">Lägg till</button> <!-- Inputfält för att skapa bok  -->
         <!-- <button>Ta bort</button> --> <!-- Ha en knapp för varje bok. -->
- <!--      </div> -->
+      </div>
 
       <div class="search-box">
-        <label for="title">Sök på en titel</label>
+        <!-- <label for="title">Sök på en titel</label> -->
         <input type="text" id="title" placeholder="Sök här..">
         <div id="results"></div>
         <button type="submit" id="search-button">Sök</button> 
@@ -65,22 +65,13 @@
         <form>
         
         <label for="title">Titel</label>
-        <input type="text" id="title" placeholder="Vad är bokens titel?">
+        <input type="text" id="title">
 
-        <label for="genre">Välj en genre:</label>
-        <select name="genre" id="genre">
-          <option value="1">Science fiction</option>
-          <option value="2">Fantasy</option>
-          <option value="3">History</option>
-          <option value="3">Drama</option>
-          <option value="3">Thriller</option>
-          <option value="3">Comedy</option>
-        </select>
-        <label for="description">Beskrivning</label>
-        <input type="text" id="description" placeholder="Kort beskrivning om boken">
+        <label for="author">Författare</label>
+        <input type="text" id="author">
 
         <label for="cover">Länk till bokomslag</label>
-        <input type="url" id="cover" placeholder="URL">
+        <input type="text" id="cover">
 
        <button type="submit" id="search-button">Lägg till</button>
         
