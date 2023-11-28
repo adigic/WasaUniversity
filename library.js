@@ -3,17 +3,9 @@ const addButton = document.querySelector("#add");
 const startMenu = document.querySelector(".start-buttons");
 const addBook = document.querySelector(".add-book");
 const searchMenu = document.querySelector(".search-box");
-const input = document.getElementById('title');
 
-function handleSearch(event)
-{
-  const searchValue = event.target.value;
-
-  if(searchValue.length > 3) {
-    
-  }
-}
-input.addEventListener('input', handleSearch);
+// global array
+let array = [];
 
 function showStartMenu() {
   startMenu.style.display = "block";
@@ -52,8 +44,12 @@ function displayBooks() {
       console.log(data);
       const bookListElement = document.getElementById("bookList");
       const bookList = document.createElement("ul");
+      
+      array = data;
 
-      data.forEach((Books) => {
+      console.log(array);
+
+      array.forEach((Books) => {
         // Create a container for each book item
         const listItem = document.createElement("li");
 
@@ -67,6 +63,7 @@ function displayBooks() {
             listItem.remove();
           }
         });
+
 
         // Label for the checkbox
         const checkboxLabel = document.createElement("label");
