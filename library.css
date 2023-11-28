@@ -609,9 +609,6 @@ footer a {
 .bookList {
 }
 
-.bookList span {
-}
-
 .bookList h2 {
   font-size: 1rem;
   font-weight: 600;
@@ -626,7 +623,7 @@ footer a {
 .bookList span {
   background-color: rgb(157, 138, 115);
   border-radius: 5px;
-  text-align: left;
+  text-align: center;
   font-size: 0.8rem;
   margin: 5px;
   padding: 5px;
