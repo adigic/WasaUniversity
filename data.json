@@ -52,21 +52,21 @@
     {
       "Title": "Harry Potter and the Philosopher's Stone",
       "Author": "J. K. Rowling",
-      "genre": "Fantasy",
+      "Genre": "Fantasy",
       "Description": " Harry lives in a cupboard under the stairs in the house of the Dursleys, his aunt, uncle and cousin, who all treat him poorly. At the age of 11, Harry discovers that he is a wizard.",
       "Cover": "https://upload.wikimedia.org/wikipedia/en/6/6b/Harry_Potter_and_the_Philosopher%27s_Stone_Book_Cover.jpg"
     },
     {
       "Title": "The Great Gatsby",
       "Author": "F. Scott Fitzgerald",
-      "genre": "Tragedy",
+      "Genre": "Tragedy",
       "Description": "Set on the prosperous Long Island of 1922, The Great Gatsby provides a critical social history of Prohibition-era America during the Jazz Age.",
       "Cover": "https://upload.wikimedia.org/wikipedia/commons/7/7a/The_Great_Gatsby_Cover_1925_Retouched.jpg"
     },
     {
       "Title": "The Girl on the Train",
       "Author": "Paula Hawkins",
-      "genre": "Thriller",
+      "Genre": "Thriller",
       "Description": "Rachel Watson is a 33-year-old alcoholic, reeling from the end of her marriage to Tom, who left her for another woman.",
       "Cover": "https://upload.wikimedia.org/wikipedia/en/5/50/The_Girl_On_The_Train_%28US_cover_2015%29.png"
     }
