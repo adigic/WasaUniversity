@@ -3,6 +3,17 @@ const addButton = document.querySelector("#add");
 const startMenu = document.querySelector(".start-buttons");
 const addBook = document.querySelector(".add-book");
 const searchMenu = document.querySelector(".search-box");
+const input = document.getElementById('title');
+
+function handleSearch(event)
+{
+  const searchValue = event.target.value;
+
+  if(searchValue.length > 3) {
+    
+  }
+}
+input.addEventListener('input', handleSearch);
 
 function showStartMenu() {
   startMenu.style.display = "block";
