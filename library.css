@@ -604,6 +604,15 @@ footer a {
   height: 150px;
 }
 
+.search-suggestion {
+  padding: 5px;
+  color: white;
+}
+
+#results {
+  color: white;
+}
+
 @media screen and (max-width: 500px) {
   .bookList ul {
     display: flex;

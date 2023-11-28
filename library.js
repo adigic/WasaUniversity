@@ -8,11 +8,34 @@ const input = document.getElementById('title');
 function handleSearch(event)
 {
   const searchValue = event.target.value;
-
-  if(searchValue.length > 3) {
-    
-  }
+  searchLibrary(searchValue);
 }
+
+function searchLibrary(query)
+{
+  const API_KEY = 'AIzaSyAqENo9qzKMPLpXUIseiU9B0pwaX2CEmA8';
+  const URL = `https://www.googleapis.com/books/v1/volumes?q=${query}&key=${API_KEY}&langRestrict=en`;
+
+  fetch(URL)
+    .then(response => response.json())
+    .then(data => {
+      searchResults(data.items);
+    });
+}
+
+function searchResults(books) {
+  books.forEach(book => {
+    const title = book.volumeInfo.title;
+    const div = document.createElement('div');
+    div.className = 'search-result';
+    div.textContent = title;
+
+    results.appendChild(div);
+  });
+}
+
+// lägg till funktion för att lägga till bok till bokhyllan
+
 input.addEventListener('input', handleSearch);
 
 function showStartMenu() {
