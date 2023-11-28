@@ -3,44 +3,9 @@ const addButton = document.querySelector("#add");
 const startMenu = document.querySelector(".start-buttons");
 const addBook = document.querySelector(".add-book");
 const searchMenu = document.querySelector(".search-box");
-const input = document.getElementById('title');
 
-function handleSearch(event)
-{
-  const searchValue = event.target.value;
-  searchLibrary(searchValue);
-}
-
-function searchLibrary(query)
-{
-  const API_KEY = 'AIzaSyAqENo9qzKMPLpXUIseiU9B0pwaX2CEmA8';
-  const URL = `https://www.googleapis.com/books/v1/volumes?q=${encodeURIComponent(query)}&key=${API_KEY}&langRestrict=en&maxResults=3`;
-
-  fetch(URL)
-    .then(response => response.json())
-    .then(data => {
-      searchResults(data.items);
-    });
-}
-
-function searchResults(books) {
-  const resultsDiv = document.getElementById('results');
-  resultsDiv.innerHTML = '';
-
-  books.forEach(book => {
-    const title = book.volumeInfo.title;
-    const div = document.createElement('div');
-    div.className = 'search-result';
-    div.textContent = title;
-    div.style = 'color: white;';
-
-    results.appendChild(div);
-  });
-}
-
-// lägg till funktion för att lägga till bok till bokhyllan
-
-input.addEventListener('input', handleSearch);
+// global array
+let array = [];
 
 function showStartMenu() {
   startMenu.style.display = "block";
@@ -79,8 +44,12 @@ function displayBooks() {
       console.log(data);
       const bookListElement = document.getElementById("bookList");
       const bookList = document.createElement("ul");
+      
+      array = data;
 
-      data.forEach((Books) => {
+      console.log(array);
+
+      array.forEach((Books) => {
         // Create a container for each book item
         const listItem = document.createElement("li");
 
@@ -94,6 +63,7 @@ function displayBooks() {
             listItem.remove();
           }
         });
+
 
         // Label for the checkbox
         const checkboxLabel = document.createElement("label");
