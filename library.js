@@ -4,22 +4,6 @@ const startMenu = document.querySelector(".start-buttons");
 const addBook = document.querySelector(".add-book");
 const searchMenu = document.querySelector(".search-box");
 
-/* function toggleForm() {
-
-    let form = document.getElementsById("add-book");
-
-
-    if (form.style.display === "none") { 
-        form.style.display = "box";
-        startMenu.style.display = "none";
-        searchMenu.style.display = "none";
-    } else {
-        form.style.display = "none";
-        startMenu.style.display = "box";
-        searchMenu.style.display = "none";
-    }
-} */
-
 function showStartMenu() {
   startMenu.style.display = "block";
   addBook.style.display = "none";
@@ -59,21 +43,46 @@ function displayBooks() {
       const bookList = document.createElement("ul");
 
       data.forEach((Books) => {
-        // Show Book Titel and Author
+        // Create a container for each book item
         const listItem = document.createElement("li");
-        listItem.textContent = `${Books.Title} by ${Books.Author}`;
+
+        // Delete checkbox for each book
+        const checkbox = document.createElement("input");
+        checkbox.type = "checkbox";
+        checkbox.id = `checkbox-${Books.id}`; // a unique id to each checkbox
+        checkbox.addEventListener("change", function () {
+          // Remove the book when the checkbox is checked
+          if (checkbox.checked) {
+            listItem.remove();
+          }
+        });
+
+        // Label for the checkbox
+        const checkboxLabel = document.createElement("label");
+        checkboxLabel.textContent = "Remove Book:";
+        checkboxLabel.htmlFor = checkbox.id;
+
+        // Show Book Title and Author
+        const titleAndAuthor = document.createElement("span");
+        titleAndAuthor.textContent = `${Books.Title} by ${Books.Author}`;
 
         // Show cover img
         const coverImage = document.createElement("img");
         coverImage.src = Books.Cover;
 
+        // Elements in a desired order
+        listItem.appendChild(titleAndAuthor);
         listItem.appendChild(coverImage);
         bookList.appendChild(listItem);
+        listItem.appendChild(checkboxLabel);
+        listItem.appendChild(checkbox);
 
         console.log(Books);
       });
+
       bookListElement.appendChild(bookList);
     })
     .catch((err) => console.log("error" + err));
 }
+
 displayBooks();

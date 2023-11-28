@@ -573,3 +573,41 @@ footer a {
     display: none;
   }
 }
+
+/*-------------------------BOOKS-------------------------------*/
+
+.bookList {
+}
+
+.bookList span {
+}
+
+.bookList ul {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.bookList li {
+  text-align: center;
+  width: 180px;
+  display: flex;
+
+  flex-direction: column;
+  align-items: center;
+  list-style: none;
+}
+
+.bookList img {
+  width: 100px;
+  height: 150px;
+}
+
+@media screen and (max-width: 500px) {
+  .bookList ul {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+}
