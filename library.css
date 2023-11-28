@@ -141,6 +141,8 @@ nav i:hover {
   display: flex;
   justify-content: center;
   flex-direction: column;
+  margin: auto;
+  margin-top: 130px;
   text-align: center;
   width: 350px;
   margin: 2vh auto;
@@ -157,7 +159,7 @@ nav i:hover {
   width: 100px;
   padding: 5px 0px;
   border-radius: 5px;
-  margin: 15px auto 0px auto;
+  margin-top: 15px;
   transition: 0.25s ease-in-out;
 }
 
@@ -169,12 +171,21 @@ nav i:hover {
 
 .search-bar .startbuttons {
   gap: 10px;
-  
 }
 
 .search-box label {
   color: white;
   padding-bottom: 10px;
+}
+
+.search-box {
+  display: none;
+}
+
+form{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
 }
 
 .search-box input{
@@ -190,25 +201,6 @@ nav i:hover {
   padding-left: 15px;
 }
 
-.search-box {
-  display: none;
-}
-
-.add-book {
-  display: none;
-}
-
-form{
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-}
-
-.add-book label {
-  color: white;
-  margin: 5px;
-}
-
 .add-book input, .add-book select{
   width: 250px;
   border-radius: 8px;
@@ -220,6 +212,11 @@ form{
   padding: 8px;
   float: left;
   padding-left: 15px;
+}
+
+.add-book label {
+  color: white;
+  margin: 5px;
 }
 
 /* form button{

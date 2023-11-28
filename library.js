@@ -31,7 +31,7 @@ addButton.addEventListener("click", function () {
 /*---Funktion för att visa lägg till menyn--*/
 function showAddMenu() {
   startMenu.style.display = "none";
-  addBook.style.display = "flex";
+  addBook.style.display = "block";
   searchMenu.style.display = "none";
 }
 
