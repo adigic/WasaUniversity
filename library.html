@@ -55,7 +55,7 @@
       </div>
 
       <div class="search-box">
-        <label for="title">Sök på en titel</label>
+        <!-- <label for="title">Sök på en titel</label> -->
         <input type="text" id="title" placeholder="Sök här..">
         <div class="results"></div>
         <button type="submit" id="search-button">Sök</button> 
@@ -63,15 +63,28 @@
 
       <div class="add-book">
         <form>
-        
+          
         <label for="title">Titel</label>
-        <input type="text" id="title">
+        <input type="text" id="title" placeholder="Vad är boktiteln?">
 
         <label for="author">Författare</label>
-        <input type="text" id="author">
+        <input type="text" id="author" placeholder="Vem är författaren?">
+
+        <label for="genre">Välj en genre:</label>
+        <select name="genre" id="genre">
+          <option value="1">Science fiction</option>
+          <option value="2">Fantasy</option>
+          <option value="3">History</option>
+          <option value="3">Drama</option>
+          <option value="3">Thriller</option>
+          <option value="3">Comedy</option>
+        </select>
+
+        <label for="description">Beskrivning</label>
+        <input type="text" id="description" placeholder="Kort beskrivning om boken">
 
         <label for="cover">Länk till bokomslag</label>
-        <input type="text" id="cover">
+        <input type="url" id="cover" placeholder="URL">
 
        <button type="submit" id="search-button">Lägg till</button>
         
