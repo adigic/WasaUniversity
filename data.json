@@ -3,71 +3,71 @@
     {
       "Title": "The Hunger Games",
       "Author": "Suzanne Collins",
-      "Genre": "",
-      "Description": "",
+      "Genre": "Science fiction",
+      "Description": "The trilogy's narrator and protagonist, Katniss Everdeen, lives in District 12, the poorest region of Panem, located in Appalachia, where people regularly die of starvation.",
       "Cover": "https://upload.wikimedia.org/wikipedia/en/d/dc/The_Hunger_Games.jpg"
     },
     {
       "Title": "The Thorn Birds",
       "Author": "Colleen McCullough",
-      "Genre": "",
-      "Description": "",
+      "Genre": "Family saga",
+      "Description": "The story begins in New Zealand on 8 December 1915, the fourth birthday of Meghann Cleary, who is the only daughter of Padraic, an Irish farm labourer, and Fiona, his wife.",
       "Cover": "https://upload.wikimedia.org/wikipedia/en/5/53/Thorn_Birds-Colleen_McCullough.jpg"
     },
     {
       "Title": "Cather in the rye",
       "Author": "J. D. Salinger",
-      "Genre": "",
-      "Description": "",
+      "Genre": "Realistic fiction",
+      "Description": "Holden Caulfield recalls the events of a weekend (Saturday afternoon to Monday afternoon) shortly before the previous year's Christmas, beginning at Pencey Preparatory Academy, a boarding school in Pennsylvania.",
       "Cover": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/89/The_Catcher_in_the_Rye_%281951%2C_first_edition_cover%29.jpg/1024px-The_Catcher_in_the_Rye_%281951%2C_first_edition_cover%29.jpg"
     },
     {
       "Title": "A Tale of Two Cities",
       "Author": "Charles Dickens",
-      "Genre": "",
-      "Description": "",
+      "Genre": "Historical function",
+      "Description": "In 1775, Jerry Cruncher flags down the nightly mail-coach en route from London to Dover. Cruncher is an employee of Tellson's Bank in London; he carries a message for Jarvis Lorry, one of the bank's managers.",
       "Cover": "https://upload.wikimedia.org/wikipedia/commons/3/3c/Tales_serial.jpg"
     },
     {
-      "Title": "And Then There Were None",
-      "Author": "Agatha Christie",
-      "Genre": "",
-      "Description": "",
-      "Cover": "https://upload.wikimedia.org/wikipedia/en/4/4a/And_Then_There_Were_None_First_Edition_Cover_1939.jpg"
+      "Title": "The Lord of the Rings",
+      "Author": "J. R. R. Tolkien",
+      "Genre": "Fantasy",
+      "Description": "Bilbo celebrates his eleventy-first (111th) birthday and leaves the Shire suddenly, passing the Ring to Frodo Baggins, his cousin.",
+      "Cover": "https://s26162.pcdn.co/wp-content/uploads/2017/05/the-lord-of-the-rings-book-cover.jpg"
     },
     {
       "Title": "The Da Vinci Code",
       "Author": "Dan Brown",
-      "Genre": "",
-      "Description": "",
+      "Genre": "Mystery",
+      "Description": "Louvre curator and Priory of Sion grand master Jacques Saunière is fatally shot one night at the museum by an albino Catholic monk named Silas, who is working on behalf of someone he knows only as the Teacher.",
       "Cover": "https://upload.wikimedia.org/wikipedia/en/6/6b/DaVinciCode.jpg"
     },
     {
       "Title": "Black Beauty",
       "Author": "Anna Sewell",
-      "Genre": "",
-      "Description": "",
+      "Genre": "Children's literature",
+      "Description": "Anna Sewell was born in Great Yarmouth, England, and had a brother named Philip, who was an engineer in Europe. At the age of 14, Anna fell while walking home from school in the rain and injured both ankles.",
       "Cover": "https://upload.wikimedia.org/wikipedia/commons/d/dc/BlackBeautyCoverFirstEd1877.jpeg"
     },
     {
       "Title": "Harry Potter and the Philosopher's Stone",
       "Author": "J. K. Rowling",
-      "genre": "",
-      "Description": "",
+      "genre": "Fantasy",
+      "Description": " Harry lives in a cupboard under the stairs in the house of the Dursleys, his aunt, uncle and cousin, who all treat him poorly. At the age of 11, Harry discovers that he is a wizard.",
       "Cover": "https://upload.wikimedia.org/wikipedia/en/6/6b/Harry_Potter_and_the_Philosopher%27s_Stone_Book_Cover.jpg"
     },
     {
       "Title": "The Great Gatsby",
       "Author": "F. Scott Fitzgerald",
-      "genre": "",
-      "Description": "",
+      "genre": "Tragedy",
+      "Description": "Set on the prosperous Long Island of 1922, The Great Gatsby provides a critical social history of Prohibition-era America during the Jazz Age.",
       "Cover": "https://upload.wikimedia.org/wikipedia/commons/7/7a/The_Great_Gatsby_Cover_1925_Retouched.jpg"
     },
     {
       "Title": "The Girl on the Train",
       "Author": "Paula Hawkins",
-      "genre": "",
-      "Description": "",
+      "genre": "Thriller",
+      "Description": "Rachel Watson is a 33-year-old alcoholic, reeling from the end of her marriage to Tom, who left her for another woman.",
       "Cover": "https://upload.wikimedia.org/wikipedia/en/5/50/The_Girl_On_The_Train_%28US_cover_2015%29.png"
     }
   ]
