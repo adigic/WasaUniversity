@@ -182,13 +182,13 @@ nav i:hover {
   display: none;
 }
 
-form{
+form {
   display: flex;
   justify-content: center;
   flex-direction: column;
 }
 
-.search-box input{
+.search-box input {
   width: 250px;
   border-radius: 8px;
   border: 2px solid rgb(189, 131, 84);
@@ -201,7 +201,8 @@ form{
   padding-left: 15px;
 }
 
-.add-book input, .add-book select{
+.add-book input,
+.add-book select {
   width: 250px;
   border-radius: 8px;
   border: 2px solid rgb(189, 131, 84);
@@ -320,8 +321,6 @@ main .card:hover {
 .card h5 {
   font-weight: bold;
 }
-
-
 
 /*--- MAIN END ---*/
 
@@ -613,7 +612,7 @@ footer a {
 .bookList span {
 }
 
-.bookList h2{
+.bookList h2 {
   font-size: 1rem;
   font-weight: 600;
   margin: 5px 0px 5px 0px;
@@ -624,7 +623,7 @@ footer a {
   padding: 0;
 }
 
-.bookList span{
+.bookList span {
   background-color: rgb(157, 138, 115);
   border-radius: 5px;
   text-align: left;

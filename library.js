@@ -1,39 +1,5 @@
-const searchButton = document.querySelector("#search");
-const addButton = document.querySelector("#add");
-const startMenu = document.querySelector(".start-buttons");
-const addBook = document.querySelector(".add-book");
-const searchMenu = document.querySelector(".search-box");
-
 // global array
 let array = [];
-
-function showStartMenu() {
-  startMenu.style.display = "block";
-  addBook.style.display = "none";
-  searchMenu.style.display = "none";
-}
-
-searchButton.addEventListener("click", function () {
-  showSearchMenu();
-});
-
-/*---Funktion för att visa sökmenyn--*/
-function showSearchMenu() {
-  startMenu.style.display = "none";
-  addBook.style.display = "none";
-  searchMenu.style.display = "block";
-}
-
-addButton.addEventListener("click", function () {
-  showAddMenu();
-});
-
-/*---Funktion för att visa lägg till menyn--*/
-function showAddMenu() {
-  startMenu.style.display = "none";
-  addBook.style.display = "flex";
-  searchMenu.style.display = "none";
-}
 
 function displayBooks() {
   fetch("http://localhost:3000/books")
@@ -84,8 +50,6 @@ function displayBooks() {
         // Show cover img
         const coverImage = document.createElement("img");
         coverImage.src = Books.Cover;
-
-        //
 
         // Elements in a desired order
         listItem.appendChild(coverImage);
