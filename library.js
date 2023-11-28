@@ -5,11 +5,15 @@ const addBook = document.querySelector(".add-book");
 const searchMenu = document.querySelector(".search-box");
 const input = document.getElementById('title');
 
-function search(event)
+function handleSearch(event)
 {
-  
+  const searchValue = event.target.value;
+
+  if(searchValue.length > 3) {
+    
+  }
 }
-input.addEventListener('input', search);
+input.addEventListener('input', handleSearch);
 
 function showStartMenu() {
   startMenu.style.display = "block";
