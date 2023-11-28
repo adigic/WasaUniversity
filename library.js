@@ -44,7 +44,7 @@ function displayBooks() {
       console.log(data);
       const bookListElement = document.getElementById("bookList");
       const bookList = document.createElement("ul");
-      
+
       array = data;
 
       console.log(array);
@@ -63,7 +63,6 @@ function displayBooks() {
             listItem.remove();
           }
         });
-
 
         // Label for the checkbox
         const checkboxLabel = document.createElement("label");
