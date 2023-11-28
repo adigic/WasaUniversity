@@ -3,9 +3,44 @@ const addButton = document.querySelector("#add");
 const startMenu = document.querySelector(".start-buttons");
 const addBook = document.querySelector(".add-book");
 const searchMenu = document.querySelector(".search-box");
+const input = document.getElementById("title");
 
-// global array
-let array = [];
+function handleSearch(event) {
+  const searchValue = event.target.value;
+  searchLibrary(searchValue);
+}
+
+function searchLibrary(query) {
+  const API_KEY = "AIzaSyAqENo9qzKMPLpXUIseiU9B0pwaX2CEmA8";
+  const URL = `https://www.googleapis.com/books/v1/volumes?q=${encodeURIComponent(
+    query
+  )}&key=${API_KEY}&langRestrict=en&maxResults=3`;
+
+  fetch(URL)
+    .then((response) => response.json())
+    .then((data) => {
+      searchResults(data.items);
+    });
+}
+
+function searchResults(books) {
+  const resultsDiv = document.getElementById("results");
+  resultsDiv.innerHTML = "";
+
+  books.forEach((book) => {
+    const title = book.volumeInfo.title;
+    const div = document.createElement("div");
+    div.className = "search-result";
+    div.textContent = title;
+    div.style = "color: white;";
+
+    results.appendChild(div);
+  });
+}
+
+// lägg till funktion för att lägga till bok till bokhyllan
+
+input.addEventListener("input", handleSearch);
 
 function showStartMenu() {
   startMenu.style.display = "block";
@@ -31,7 +66,7 @@ addButton.addEventListener("click", function () {
 /*---Funktion för att visa lägg till menyn--*/
 function showAddMenu() {
   startMenu.style.display = "none";
-  addBook.style.display = "flex";
+  addBook.style.display = "block";
   searchMenu.style.display = "none";
 }
 
