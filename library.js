@@ -72,7 +72,7 @@ function displayBooks() {
 
         // Show Description
         const descriptionElement = document.createElement("span");
-        descriptionElement = `Description: ${Books.Description}`;
+        descriptionElement.textContent = `Description: ${Books.Description}`;
 
         // Show cover img
         const coverImage = document.createElement("img");
