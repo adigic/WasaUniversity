@@ -32,7 +32,7 @@ function displayBooks() {
 
         // Label for the checkbox
         const checkboxLabel = document.createElement("label");
-        checkboxLabel.textContent = "Remove Book:";
+        checkboxLabel.textContent = "Ta bort:";
         checkboxLabel.htmlFor = checkbox.id;
 
         // Show Book Title and Author
