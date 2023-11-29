@@ -68,6 +68,10 @@ document.getElementById("add-button").addEventListener("click", (event) => {
   const bookDescription = document.getElementById("description").value;
   const coverUrl = document.getElementById("cover").value;
 
+  if (!bookTitle || !bookGenre || !bookDescription || !coverUrl) {
+    alert("Please fill in all fields before adding a new book.");
+    return; // Avsluta funktionen om valideringen misslyckas
+  }
   // Skapa en ny bok
   const newBook = {
     Title: bookTitle,
@@ -87,6 +91,7 @@ document.getElementById("add-button").addEventListener("click", (event) => {
     .then((serverBooks) => {
       // Blanda den lokala och de serverhämtade böckerna och visa dem
       const combinedBooks = array.concat(serverBooks);
+
       displayBooks(combinedBooks);
     })
     .catch((err) => console.log("error" + err));
