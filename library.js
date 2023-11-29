@@ -32,7 +32,7 @@ function displayBooks() {
 
         // Label for the checkbox
         const checkboxLabel = document.createElement("label");
-        checkboxLabel.textContent = "Remove Book:";
+        checkboxLabel.textContent = "Ta bort:";
         checkboxLabel.htmlFor = checkbox.id;
 
         // Show Book Title and Author
@@ -45,7 +45,7 @@ function displayBooks() {
 
         // Show Description
         const descriptionElement = document.createElement("span");
-        descriptionElement.textContent = `Description: ${Books.Description}`;
+        descriptionElement.textContent = `${Books.Description}`;
 
         // Show cover img
         const coverImage = document.createElement("img");
