@@ -1,71 +1,89 @@
 // global array
 let array = [];
 
-function displayBooks() {
-  fetch("http://localhost:3000/books")
-    .then((res) => {
-      return res.json();
-    })
-    .then((data) => {
-      console.log(data);
-      const bookListElement = document.getElementById("bookList");
-      const bookList = document.createElement("ul");
 
-      array = data;
+function displayBooks(bookArray) {
+  const bookListElement = document.getElementById("bookList");
+  bookListElement.innerHTML = ''; // Clear the previous content
 
-      console.log(array);
+  const bookList = document.createElement("ul");
 
-      array.forEach((Books) => {
-        // Create a container for each book item
-        const listItem = document.createElement("li");
+  bookArray.forEach((book) => {
+    const listItem = document.createElement("li");
 
-        // Delete checkbox for each book
-        const checkbox = document.createElement("input");
-        checkbox.type = "checkbox";
-        checkbox.id = `checkbox-${Books.id}`; // a unique id to each checkbox
-        checkbox.addEventListener("change", function () {
-          // Remove the book when the checkbox is checked
-          if (checkbox.checked) {
-            listItem.remove();
-          }
-        });
+    const checkbox = document.createElement("input");
+    checkbox.type = "checkbox";
+    checkbox.id = `checkbox-${book.id}`;
+    checkbox.addEventListener("change", function () {
+      if (checkbox.checked) {
+        listItem.remove();
+      }
+    });
 
-        // Label for the checkbox
-        const checkboxLabel = document.createElement("label");
-        checkboxLabel.textContent = "Ta bort:";
-        checkboxLabel.htmlFor = checkbox.id;
+    const checkboxLabel = document.createElement("label");
+    checkboxLabel.textContent = "Ta bort:";
+    checkboxLabel.htmlFor = checkbox.id;
 
-        // Show Book Title and Author
-        const titleAndAuthor = document.createElement("h2");
-        titleAndAuthor.textContent = `${Books.Title} by ${Books.Author}`;
+    const titleAndAuthor = document.createElement("h2");
+    titleAndAuthor.textContent = `${book.Title}`;
 
-        // Show Genre
-        const genreElement = document.createElement("p");
-        genreElement.textContent = `Genre: ${Books.Genre}`;
+    const genreElement = document.createElement("p");
+    genreElement.textContent = `Genre: ${book.Genre}`;
 
-        // Show Description
-        const descriptionElement = document.createElement("span");
-        descriptionElement.textContent = `${Books.Description}`;
+    const descriptionElement = document.createElement("span");
+    descriptionElement.textContent = `${book.Description}`;
 
-        // Show cover img
-        const coverImage = document.createElement("img");
-        coverImage.src = Books.Cover;
+    const coverImage = document.createElement("img");
+    coverImage.src = book.Cover;
 
-        // Elements in a desired order
-        listItem.appendChild(coverImage);
-        listItem.appendChild(titleAndAuthor);
-        listItem.appendChild(genreElement);
-        listItem.appendChild(descriptionElement);
-        bookList.appendChild(listItem);
-        listItem.appendChild(checkboxLabel);
-        listItem.appendChild(checkbox);
+    listItem.appendChild(coverImage);
+    listItem.appendChild(titleAndAuthor);
+    listItem.appendChild(genreElement);
+    listItem.appendChild(descriptionElement);
+    listItem.appendChild(checkboxLabel);
+    listItem.appendChild(checkbox);
 
-        console.log(Books);
-      });
+    bookList.appendChild(listItem);
+  });
 
-      bookListElement.appendChild(bookList);
-    })
-    .catch((err) => console.log("error" + err));
+  bookListElement.appendChild(bookList);
 }
 
-displayBooks();
+document.getElementById('add-button').addEventListener('click', (event) => {
+  event.preventDefault();
+
+  const bookTitle = document.getElementById("title").value;
+  const bookGenre = document.getElementById("genre").value;
+  const bookDescription = document.getElementById("description").value;
+  const coverUrl = document.getElementById("cover").value;
+
+  const newBook = {
+    Title: bookTitle,
+    Genre: bookGenre,
+    Description: bookDescription,
+    Cover: coverUrl
+  };
+
+  array.push(newBook);
+  console.log(array);
+
+  // fetched böcker från server
+  fetch("http://localhost:3000/books")
+    .then((res) => res.json())
+    .then((serverFetchedBooks) => {
+      // Kombinerar server-fetchade böcker och array books som sedan visas
+      const combinedBooks = array.concat(serverFetchedBooks); //.concat för att kombinera arrays
+      displayBooks(combinedBooks);
+    })
+    .catch((err) => console.log("error" + err));
+});
+
+// Ursprung med serverhämtade böcker
+fetch("http://localhost:3000/books")
+  .then((res) => res.json())
+  .then((initialServerFetchedBooks) => {
+    displayBooks(initialServerFetchedBooks);
+  })
+  .catch((err) => console.log("error" + err));
+
+

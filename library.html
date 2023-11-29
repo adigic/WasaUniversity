@@ -49,27 +49,27 @@
        <div class="search-bar">
 
         <div class="add-book">
-          <form>
+          <form id="form">
           
           <label for="title">Titel</label>
           <input type="text" id="title" placeholder="Vad är bokens titel?">
   
           <label for="genre">Välj en genre:</label>
           <select name="genre" id="genre" >
-            <option value="1">Science fiction</option>
-            <option value="2">Fantasy</option>
-            <option value="3">History</option>
-            <option value="4">Drama</option>
-            <option value="5">Thriller</option>
-            <option value="6">Comedy</option>
+            <option value="Science Fiction">Science Fiction</option>
+            <option value="Fantasy">Fantasy</option>
+            <option value="History">History</option>
+            <option value="Drama">Drama</option>
+            <option value="Thriller">Thriller</option>
+            <option value="Comedy">Comedy</option>
           </select>
           <label for="description">Beskrivning</label>
           <input type="text" id="description" placeholder="Kort beskrivning om boken">
   
           <label for="cover">Länk till bokomslag</label>
-          <input type="text" id="cover" placeholder="URL">
+          <input type="url" id="cover" placeholder="URL">
   
-         <button type="submit" id="search-button">Lägg till</button>
+         <button type="submit" id="add-button">Lägg till</button>
           
         </form>
         </div>
