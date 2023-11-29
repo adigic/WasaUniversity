@@ -21,12 +21,19 @@ function displayBooks(bookArray) {
     checkbox.type = "checkbox";
     checkbox.id = `checkbox-${book.id}`;
     checkbox.addEventListener("change", function () {
-      // Ta bort Li från listan om kryssrutan är markerad
+      const bookIndex = array.findIndex(
+        (b) => `checkbox-${b.id}` === checkbox.id
+      );
+
+      if (checkbox.checked && bookIndex !== -1) {
+        // Remove the book from the array
+        array.splice(bookIndex, 1);
+      }
+
       if (checkbox.checked) {
         listItem.remove();
       }
     });
-
     // Skapa en etikett för kryssrutan
     const checkboxLabel = document.createElement("label");
     checkboxLabel.textContent = "Ta bort:";
@@ -107,10 +114,10 @@ fetch("http://localhost:3000/books")
   })
   .catch((err) => console.log("error" + err));
 
-  // Funktion för att rensa inputs efter submit
-  function clearInputFields() {
-    // Clear input values after submission
-    document.getElementById("title").value = "";
-    document.getElementById("description").value = "";
-    document.getElementById("cover").value = "";
-  }
+// Funktion för att rensa inputs efter submit
+function clearInputFields() {
+  // Clear input values after submission
+  document.getElementById("title").value = "";
+  document.getElementById("description").value = "";
+  document.getElementById("cover").value = "";
+}
