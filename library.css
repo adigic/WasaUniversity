@@ -154,7 +154,9 @@ nav i:hover {
 .search-bar button {
   text-decoration: none;
   border: none;
-  color: rgb(68, 43, 26);
+  color: burlywood;
+  background-color: rgb(117, 84, 62);
+  border-color: rgb(97, 76, 59);
   width: 100px;
   padding: 5px 0px;
   border-radius: 5px;
@@ -163,11 +165,13 @@ nav i:hover {
   margin: 25px auto 0px auto;
 }
 
-.search-bar button:hover {
-  background-color: burlywood;
-  width: 120px;
-  font-weight: bold;
+.search-bar button:hover{
+  background-color: rgb(92, 69, 51);
+  border-color: rgb(95, 74, 56);
+  transform: scale(1.05);
 }
+
+
 
 .search-bar .startbuttons {
   gap: 10px;
