@@ -22,38 +22,36 @@
   <body>
     <header>
       <nav>
-        <!---------->
+
         <!-- LOGO -->
-        <!---------->
         <div class="logo">
           <a href="index.html"><i class="bx bx-library"></i></a>
         </div>
 
-        <!--------------->
         <!-- NAV LINKS -->
-        <!--------------->
         <ul class="nav-links">
           <li><a href="#">Aktuellt</a></li>
           <li><a href="#">Forskning</a></li>
           <li><a href="#carousel">Om Universitetet</a></li>
         </ul>
 
-        <!----------------->
         <!-- BURGER MENU -->
-        <!----------------->
         <div class="burger-menu">
           <i class="bx bx-menu"></i>
         </div>
       </nav>
 
-       <div class="search-bar">
 
+      <!-- ADD BOOK MENU -->
+       <div class="search-bar">
         <div class="add-book">
           <form id="form">
           
+          <!-- TITLE -->
           <label for="title">Titel</label>
           <input type="text" id="title" placeholder="Vad är bokens titel?">
   
+          <!-- GENRE -->
           <label for="genre">Välj en genre:</label>
           <select name="genre" id="genre" >
             <option value="Science Fiction">Science Fiction</option>
@@ -63,9 +61,12 @@
             <option value="Thriller">Thriller</option>
             <option value="Comedy">Comedy</option>
           </select>
+
+          <!-- DESCRIPTION -->
           <label for="description">Beskrivning</label>
           <input type="text" id="description" placeholder="Kort beskrivning om boken">
   
+          <!-- COVER -->
           <label for="cover">Länk till bokomslag</label>
           <input type="url" id="cover" placeholder="URL">
   
