@@ -51,7 +51,6 @@ header {
   background-position: center;
   background-size: cover;
   grid-area: header;
-  /* height: 550px; */
 }
 
 /*--- NAV START---*/
@@ -135,7 +134,7 @@ nav i:hover {
 
 /*--- NAV END---*/
 
-/*--- SEARCHBAR END ---*/
+/*--- FORM START ---*/
 .search-bar {
   color: white;
   display: flex;
@@ -165,16 +164,10 @@ nav i:hover {
   margin: 25px auto 0px auto;
 }
 
-.search-bar button:hover{
+.search-bar button:hover {
   background-color: rgb(92, 69, 51);
   border-color: rgb(95, 74, 56);
   transform: scale(1.05);
-}
-
-
-
-.search-bar .startbuttons {
-  gap: 10px;
 }
 
 .search-box label {
@@ -224,106 +217,67 @@ form {
   margin: 5px;
 }
 
-/* form button{
-  margin-top: 15px;
-} */
-
-/*--- SEARCHBAR END ---*/
+/*--- FORM END ---*/
 
 /*--- HEADER END ---*/
 
-/*--- MAIN START---*/
-.main-title {
-  display: flex;
-  margin-left: 15px;
-}
+/*--- MAIN START ---*/
 
-main h3 {
-  color: rgb(68, 43, 26);
-  text-transform: uppercase;
+.bookList h2 {
+  font-size: 1rem;
   font-weight: 600;
-  font-size: 2rem;
-  text-align: start;
-  border-bottom: 2px solid black;
-  padding: 0px;
-  margin: 0;
-  width: max-content;
+  margin: 5px 0px 5px 0px;
 }
 
-main i {
-  font-size: 2rem;
-  border: 2px solid;
-  margin-right: 10px;
-  padding: 5px;
+.bookList p {
+  margin-bottom: 10px;
+  padding: 0;
 }
 
-main p,
-main h4 {
-  color: black;
-}
-
-main p {
-  padding-top: 20px;
-}
-
-.wrapper {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 40px;
-  margin-top: 20px;
-}
-
-.wrapper i {
-  color: black;
-  font-size: 40px;
-  min-width: fit-content;
-}
-
-.card {
+.bookList span {
+  background-color: rgb(157, 138, 115);
+  border-radius: 5px;
   text-align: center;
-  transition: transform 0.25s ease-in-out;
-  margin-bottom: 40px;
-  margin-top: 20px;
-  transition: 0.5s;
+  font-size: 0.8rem;
+  margin: 5px;
+  padding: 5px;
+  height: 100px;
 }
 
-main .card {
-  background-color: white;
-  color: rgb(68, 43, 26);
-  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+.bookList ul {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0;
+  margin: 0;
+  justify-content: center;
 }
 
-main .card p {
-  color: rgb(68, 43, 26);
+.bookList li {
+  text-align: center;
+  display: flex;
+  width: 500px;
+  flex-direction: column;
+  align-items: center;
+  list-style: none;
+  background-color: rgb(185, 164, 137);
+  margin: 5px;
+  padding: 10px;
+  border-radius: 5px;
 }
 
-.wrapper .card {
-  width: 18rem;
+.bookList img {
+  width: 300px;
+  height: 400px;
+  padding: 10px;
 }
 
-main .btn-primary,
-.btn-primary:focus,
-.btn-primary:active {
-  background-color: rgb(117, 84, 62) !important;
-  border-color: rgb(97, 76, 59) !important;
-  width: 50%;
-  color: rgb(255, 255, 255);
+.search-suggestion {
+  padding: 5px;
+  color: white;
 }
 
-main .btn-primary:hover {
-  background-color: rgb(92, 69, 51) !important;
-  border-color: rgb(95, 74, 56) !important;
-}
-
-main .card:hover {
-  transform: scale(1.03);
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
-    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
-}
-
-.card h5 {
-  font-weight: bold;
+#results {
+  color: white;
 }
 
 /*--- MAIN END ---*/
@@ -606,68 +560,16 @@ footer a {
   .footer-middle {
     display: none;
   }
-}
 
-/*-------------------------BOOKS-------------------------------*/
+  .bookList ul {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
 
-.bookList {
-}
-
-.bookList h2 {
-  font-size: 1rem;
-  font-weight: 600;
-  margin: 5px 0px 5px 0px;
-}
-
-.bookList p {
-  margin-bottom: 10px;
-  padding: 0;
-}
-
-.bookList span {
-  background-color: rgb(157, 138, 115);
-  border-radius: 5px;
-  text-align: center;
-  font-size: 0.8rem;
-  margin: 5px;
-  padding: 5px;
-  height: 100px;
-}
-
-.bookList ul {
-  display: flex;
-  flex-wrap: wrap;
-  padding: 0;
-  margin: 0;
-  justify-content: center;
-}
-
-.bookList li {
-  text-align: center;
-  display: flex;
-  width: 500px;
-  flex-direction: column;
-  align-items: center;
-  list-style: none;
-  background-color: rgb(185, 164, 137);
-  margin: 5px;
-  padding: 10px;
-  border-radius: 5px;
-}
-
-.bookList img {
-  width: 300px;
-  height: 400px;
-  padding: 10px;
-}
-
-.search-suggestion {
-  padding: 5px;
-  color: white;
-}
-
-#results {
-  color: white;
+  .bookList li {
+    width: 80vw;
+  }
 }
 
 @media screen and (max-width: 500px) {
@@ -676,11 +578,9 @@ footer a {
     align-items: center;
     flex-direction: column;
   }
-}
 
-@media screen and (max-width: 500px) {
   .bookList li {
-    width: 90vw;
+    width: 80vw;
   }
 
   .bookList img {
