@@ -84,9 +84,9 @@ document.getElementById("add-button").addEventListener("click", (event) => {
   // Hämta böcker från servern
   fetch("http://localhost:3000/books")
     .then((res) => res.json())
-    .then((serverFetchedBooks) => {
+    .then((serverBooks) => {
       // Blanda den lokala och de serverhämtade böckerna och visa dem
-      const combinedBooks = array.concat(serverFetchedBooks);
+      const combinedBooks = array.concat(serverBooks);
       displayBooks(combinedBooks);
     })
     .catch((err) => console.log("error" + err));
@@ -95,8 +95,8 @@ document.getElementById("add-button").addEventListener("click", (event) => {
 // Hämta böcker från servern när sidan laddas
 fetch("http://localhost:3000/books")
   .then((res) => res.json())
-  .then((initialServerFetchedBooks) => {
-    // Visa de böcker som hämtats från början
-    displayBooks(initialServerFetchedBooks);
+  .then((serverBooks) => {
+    // Visa de böcker från data.json
+    displayBooks(serverBooks);
   })
   .catch((err) => console.log("error" + err));
