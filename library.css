@@ -241,7 +241,7 @@ form {
   font-size: 0.8rem;
   margin: 5px;
   padding: 5px;
-  height: 100px;
+  /* height: 100px; <--- orsakade problem i mobilvy */
 }
 
 .bookList ul {
