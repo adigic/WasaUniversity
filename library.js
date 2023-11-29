@@ -93,6 +93,7 @@ document.getElementById("add-button").addEventListener("click", (event) => {
       const combinedBooks = array.concat(serverBooks);
 
       displayBooks(combinedBooks);
+      clearInputFields();
     })
     .catch((err) => console.log("error" + err));
 });
@@ -105,3 +106,11 @@ fetch("http://localhost:3000/books")
     displayBooks(serverBooks);
   })
   .catch((err) => console.log("error" + err));
+
+  // Funktion för att rensa inputs efter submit
+  function clearInputFields() {
+    // Clear input values after submission
+    document.getElementById("title").value = "";
+    document.getElementById("description").value = "";
+    document.getElementById("cover").value = "";
+  }
